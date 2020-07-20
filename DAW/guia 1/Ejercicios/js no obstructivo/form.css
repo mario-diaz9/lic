@@ -1,0 +1,44 @@
+@IMPORT url("https://fonts.googleapis.com/css?family=Girassol&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Girassol', cursive;
+    color: rgb(43, 62, 228);
+    text-shadow: 2px 2px 3px #000;
+}
+h2{
+    font-size: 2em;
+    color: blue;
+    font-family: 'Girassol', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000;
+   margin-bottom: 30px;
+
+}
+p{
+    width: 250px;
+    margin: 0 auto;
+   font-size: 2em;
+    font-family: 'Girassol', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000;
+    padding: 0;
+    color: rgb(9, 255, 0);
+}
+.caja{
+    font-size: 1.4em;
+    font-family: 'Girassol', cursive;
+    width: 550px;
+    position: absolute;
+    top: 175px;
+    padding-left: 30px;
+    margin: auto;
+    text-align: justify;
+}
+p span{
+   color: red;
+}

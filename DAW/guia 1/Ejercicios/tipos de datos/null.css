@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(152, 248, 211);
+}
+p{
+    width: 450px;
+    margin: 30px;
+    font-size: 1.4em;
+    position: relative;
+    left: 500px;
+
+}
+.tipos{
+    margin: 30px;
+    font-size: 1.3em;
+    text-align: justify;
+}
+h1{
+    text-align: center;
+}
