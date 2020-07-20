@@ -1,6 +1,7 @@
 section{
     overflow: hidden;
     margin-top: 15px;
+    width: 33%;
 }
 section article p{
   font-size: 20px;
