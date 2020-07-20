@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
   }
-  
+  body{
+    background-image: url(../img/pooling.jpg);
+    background-size: cover;
+  }
 nav {
     text-align: center;
     
