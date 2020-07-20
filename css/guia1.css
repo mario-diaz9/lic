@@ -152,3 +152,9 @@ section{
       color: #080808;
       text-decoration: none;
   }
+  h1 {
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  }
