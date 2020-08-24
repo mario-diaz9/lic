@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direcciones</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/formstyle.css" />
+    <script src="js/validar.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="javascript:void(0)" name="frmdatos" id="dataform">
+            <h2 class="contact">Validador de datos</h2>
+            <span class="contact">
+                <label for="tipo">Seleccione el tipo de dato:</label>&nbsp;&nbsp;
+            </span>
+            <select name="seltipo" id="tipo">
+                <option value="direcciones IPv4" selected>direcciones IPv4</option>
+                <option value="direcciones web">direcciones web</option>
+                <option value="direcciones de correo">direcciones de correo</option>
+            </select>
+            <span class="contact">
+                <label for="txtdato">Dato:</label>&nbsp;&nbsp;
+            </span>
+            <input type="text" name="txtdato" id="data" value="" maxlength="50" placeholder="(Ingrese el dato)" /><br />
+            <input type="button" name="btnvalidar" id="validar" value="Validar" />
+        </form>
+    </div>
+</body>
+</html>
