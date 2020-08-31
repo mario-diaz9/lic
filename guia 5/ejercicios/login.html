@@ -1,47 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title> 
+    <title>Login</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/prueba.js"></script>
 </head>
 <body>
     <section id="slick">
-        <!-- Área de formulario -->
         <div class="contact-form">
-            <!-- Título -->
-            <div class="title">Registrar usuario</div>
-
+            <div class="title">Registro de usuario</div>
             <div class="w-100">
-                <form name="frmPotencia" id="frmPotencia" action="">
-                    <!-- Campo para la nombre -->
+                <form name="frmregistro" id="formregistro" action="javascript:void(0);">
+
                     <div class="field">
                         <label for="title">Nombres</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="nombre" required  title="escriba algo"/>
+                        <input type="text" name="nombre" id="nombre" placeholder="nombre" required />
                     </div>
-                    <!-- Campo para la apellido -->
                     <div class="field">
-                        <label for="title">Apellidos</label>
-                        <input type="text" name="apelldos" id="apelldos" placeholder="apelldos" required />
+                        <label for="title">Apellido(ingresar solo uno)</label>
+                        <input type="text" name="apelldos" id="apellidos" placeholder="apelldos" required />
                     </div>
-                    <!-- Campo para el correo -->
                     <div class="field">
                         <label for="title">Correo electronico</label>
                         <input type="email" name="email" id="email" placeholder="Correo electronico" required />
                     </div>
-                    <!-- Campo para la contra -->
                     <div class="field">
                         <label for="title">Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="password" required />
                     </div>
-                    <!-- Campo para la contra confir -->
                     <div class="field">
                         <label for="title">Confirmar contraseña</label>
                         <input type="password" name="password2" id="password2" placeholder="Confirmar password" required />
                     </div>
-                    <!-- Botones para hacer los cálculos -->
-                    <input type="button" value="Guardar" class="send" name="mostrar" id="mostrar" />
+                    <div class="field">
+                        <label for="title">fecha de nacimiento:</label>
+                        <input type="date" name="fechanac" id="fechanac"required />
+                    </div>
+                    <input type="button" value="registrar" class="send" name="btnregistrar" id="respuesta" />
                 </form>
             </div>
         </div>

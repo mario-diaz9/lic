@@ -1,66 +1,76 @@
-//Creando el objeto
-var book = new Object();
 //Registrar evento click del ratón al presionar botones de envío
 function iniciar() {
-    var showinfo = document.getElementById("mostrar");
-    if (showinfo.addEventListener) {
-        showinfo.addEventListener("click", function () {
-            createObject(document.frmbook);
-        }, false);
+    var btnregistrar = document.getElementById("respuesta");
+    if (btnregistrar.addEventListener) {
+        btnregistrar.addEventListener("click", registro, false);
     }
-    else if (showinfo.attachEvent) {
-        showinfo.attachEvent("onclick", function () {
-            createObject(document.frmbook);
-        });
+    else {
+        btnregistrar.attachEvent("onclick", registro);
     }
 }
-// Creando el nuevo objeto
-function createObject(form) {
-    book.nombre = form.nombre.value;
-    book.apellido = form.apellido.value;
-    book.correo = form.email.value;
-    book.contra = form.password.value;
-    book.contra2 = form.password2.value;
-    showProperties(book, "InfoBook");
+function registro() {
+    var rect = new registros(
+        document.frmregistro.nombre.value,
+        document.frmregistro.apellidos.value,
+        document.frmregistro.email.value,
+        document.frmregistro.password.value,
+        document.frmregistro.password2.value,
+        document.frmregistro.fechanac.value);
+    return false;
 }
-function showProperties(objeto, objName) {
-    var infBook = "";
-    var tblBook = "";
-    for (var i in objeto) {
-        infBook = infBook + objName + "." + i + " = " + objeto[i] + "\n";
+function registros(nombres, apellidos, correo, contra, confirContra, fechanac) {
+    var tabla = "";
+    var codigo;
+    this.fechanac = fechanac;
+    var letra1 = "";
+    var letra2 = "";
+    var fecha = new Date();
+    var year = fecha.getFullYear();
+    var azar = Math.floor(Math.random() * (9999 - 1000));
+    if (/^[A-Z ]+$/i.test(nombres) || /^(?:[-A-Z]+ )+[-A-Z]+$/i.test(nombres) ) {
+        this.nombres = nombres;
+    } else {
+        alert("Nombre no valido");
     }
-    if (!confirm(infBook + "\n\n¿Es esta información correcta?")) {
-        frmbook.cod.value= "dm1232";
-        frmbook.nombre.value = "";
-        frmbook.apellido.value = "";
-        frmbook.email.value = "";
+    if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(correo)) {
+        this.correo = correo;
+    } else {
+        alert("Correo electronico no valido");
     }
-    tblBook += "<!DOCTYPE html>\n";
-    tblBook += "<html lang=\"es\">\n";
-    tblBook += "<head>\n\t";
-    tblBook += "<title>Información del libro</title>\n";
-    tblBook += "<meta charset=\"utf-8\" />";
-    tblBook += "<link rel=\"stylesheet\"href=\"../css/infolibro.css\"/>\n";
-    tblBook += "</head>\n";
-    tblBook += "<body>\n";
-    tblBook += "<table class=\"bookinfo\">";
-    tblBook += "<thead>\n\t<tr>\n\t\t";
-    tblBook += "<th>cod</th>\n\t\t";
-    tblBook += "<th>nombre</th>\n\t\t";
-    tblBook += "<th>apellido</th>\n\t\t";
-    tblBook += "<th>email</th>\n\t\t";
-    tblBook += "</tr>\n\t</thead>\n";
-    tblBook += "<tbody>\n\t";
-    tblBook += "<tr>\n\t\t";
-    tblBook += "<td>" + book.cod + "</td>\n\t\t";
-    tblBook += "<td>" + book.nombre + "</td>\n\t\t";
-    tblBook += "<td>" + book.apellido + "</td>\n\t\t";
-    tblBook += "<td>" + book.email + "</td>\n\t\t";
-    tblBook += "</tr></tbody>\n";
-    tblBook += "</table>\n";
-    tblBook += "</head>\n";
-    tblBook += "</html>\n";
-    document.write(tblBook);
+    if ((contra.length > 8) && (contra == confirContra)) {
+        this.contra = contra;
+        this.confirContra = confirContra;
+    } else {
+        alert("Contraseñas no coinciden o no superaron los 8 digitos");
+    }
+ if (/^[A-Z ]+$/i.test(apellidos) ) {
+        this.apellidos = apellidos;
+        letra1 = apellidos.substr(0, 1);
+        letra1 = letra1.toUpperCase();
+        letra2 = apellidos.substr(0, 1);
+        letra2 = letra2.toUpperCase();
+        codigo = letra1 + "" + letra2 + year + azar + "";
+       
+    } else {
+        alert("Apellido no valido");
+    }
+    tabla += "<table>";
+    tabla += "<thead>\n\t<tr>\n\t\t";
+    tabla += "<th>codigo</th>\n\t\t";
+    tabla += "<th>Nombre</th>\n\t\t";
+    tabla += "<th>Apellido</th>\n\t\t";
+    tabla += "<th>Correo Electronico</th>\n\t\t";
+    tabla += "<th>Fecha nacimiento</th>\n\t\t";
+    tabla += "<tbody>\n\t";
+    tabla += "<tr>\n\t\t";
+    tabla += "<td>" + codigo + "</td>\n\t\t";
+    tabla += "<td>" + nombres + "</td>\n\t\t";
+    tabla += "<td>" + apellidos + "</td>\n\t\t";
+    tabla += "<td>" + correo + "</td>\n\t\t";
+    tabla += "<td>" + fechanac + "</td>\n\t\t";
+    tabla += "</tr></tbody>\n";
+    tabla += "</table>\n";
+    document.write(tabla);
 }
 //Asociando función que manejará el evento load al cargar la página
 if (window.addEventListener) {
