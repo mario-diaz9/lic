@@ -37,7 +37,7 @@ function registros(nombres, apellidos, correo, contra, confirContra, fechanac) {
     } else {
         alert("Correo electronico no valido");
     }
-    if ((contra.length > 8) && (contra == confirContra)) {
+    if ((contra.length >= 8) && (contra == confirContra)) {
         this.contra = contra;
         this.confirContra = confirContra;
     } else {
