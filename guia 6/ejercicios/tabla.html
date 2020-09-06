@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <link rel="stylesheet" href="css/tabla.css">
+</head>
+
+<body>
+    <h4>Cree su tabla</h4>
+    <input type="Number" id="fil" min="0" placeholder="Numero de filas"> <br>
+    <input type="Number" id="col" min="0" placeholder="Numero de columnas"><br>
+    <button id="enviar">Crear</button>
+
+    <h4>Editar </h4>
+    <input type="Number" min="0" id="coodenadaFila" placeholder="fila"> <br>
+    <input type="Number" min="0" id="coodenadaColumna" placeholder="columna"> <br>
+    <input type="text" id="dato" placeholder="Texto nuevo"><br>
+    <button id="editarT">Editar celda</button>
+
+    <div id="tablaDinamica"></div>
+</body>
+<script src="js/tabla.js"></script>
+
+</html>

@@ -1,0 +1,16 @@
+table{
+    margin: 60px auto;
+    background: #b9c9fe;
+    color: #039;
+    font-size: 13pt;
+    border-collapse: collapse;
+}
+table th{
+    background: rgba(13, 71, 161, 1);
+    padding: 10px;
+    color: white;
+}
+table td{
+    border: 1px solid rgb(121, 112, 112);
+    padding: 10px;
+}
