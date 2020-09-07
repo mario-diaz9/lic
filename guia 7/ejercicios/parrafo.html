@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Cambio de clases CSS dinámico</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/headings.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <script src="js/CSSClass.js"></script>
+    <script src="js/classname.js"></script>
+</head>
+
+<body>
+    <header>
+        <p id="head">En 2015, cuando la Reina Isabel II de Inglaterra visitó el set de rodaje de “Juego de Tronos” 
+            rechazó sentarse en el Trono de Hierro porque, según el protocolo, 
+            como reina tiene prohibido sentarse en un trono extranjero.</p>
+    </header>
+    <section>
+        <article>
+            <form name="frmclass">
+                <label>Estilo:</label>
+                <select name="classes">
+                    <option value="" selected="selected">(Escoja un estilo)</option>
+                    <option value="formal">Tipo de fuente</option>
+                    <option value="letterpress">Color</option>
+                    <option value="offset">Alineacion</option>
+                </select><br />
+                <input type="button" name="agregar" id="add" value="Agregar" />
+                <input type="button" name="eliminar" id="remove" value="Eliminar" />
+            </form>
+        </article>
+    </section>
+</body>
+
+</html>

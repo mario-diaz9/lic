@@ -13,7 +13,7 @@ function newTable(){
         cont+="<tr>";
         for(i=1; i<=columna; i++){
             cont+="<td id="+j+i+">" 
-            cont+= "Hilera ("+i+","+j+")"
+            cont+= "Hilera ("+j+","+i+")"
             cont+="</td>";
         }    
         cont+="</tr>";

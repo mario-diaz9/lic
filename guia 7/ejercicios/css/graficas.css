@@ -1,0 +1,22 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: century gothic;
+}
+
+body {
+	background-color: #ededed
+}
+
+#form-param {
+	padding: 20px;
+	background-color: #fff;
+	display: flex;
+}
+button{
+	border: none;
+	padding: 9px;
+	display: block;
+	margin: 6px
+}
+

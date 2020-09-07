@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+header, section{
+    padding-top: 20px;
+    position: relative;
+    left: 15%;
+    width: 75%;
+}
+body {
+    font-size: 20px;
+    font-family: Tahoma,Helvetica,"Liberation Sans";
+}
+
+.formal {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.letterpress{
+    color: red;
+}
+
+.offset{
+    text-align: center;    
+}

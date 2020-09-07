@@ -1,9 +1,9 @@
 function init() {
     var btnenabled = document.getElementById("enabled");
     var btndisabled = document.getElementById("disabled");
-    var btnchange = document.getElementById("change");
-    var btnremove = document.getElementById("remove");
-    var btnadd = document.getElementById("add");
+    var btnsize = document.getElementById("size");
+    var btncolor = document.getElementById("color");
+    var btnposicion = document.getElementById("posicion");
     //Implementación del botón Habilitar reglas de estilo
     if (btnenabled.addEventListener) {
         btnenabled.addEventListener("click", function () {
@@ -26,21 +26,18 @@ function init() {
             document.styleSheets[0].disabled = true;
         });
     }
-    //Implementación del botón modificar regla
-    if (btnchange.addEventListener) {
-        btnchange.addEventListener("click", modifyRule, false);
+    //tamano de la letra
+    if (btnenabled.addEventListener) {
+        btnenabled.addEventListener("click", function () {
+            document.styleSheets[0].disabled = false;
+        }, false);
     }
-    else if (btnchange.attachEvent) {
-        btnchange.attachEvent("onclick", modifyRule);
+    else if (btnenabled.attachEvent) {
+        btnenabled.attachEvent("onclick", function () {
+            document.styleSheets[0].disabled = false;
+        });
     }
 
-    //Implementación del botón añadir regla
-    if (btnadd.addEventListener) {
-        btnadd.addEventListener("click", addRule, false);
-    }
-    else if (btnadd.attachEvent) {
-        btnadd.attachEvent("onclick", addRule);
-    }
 }
 function modifyRule() {
     var styleSheet = document.styleSheets[0];
@@ -53,7 +50,18 @@ function modifyRule() {
         styleSheet.cssRules[0].style.backgroundColor = 'gold';
     }
 }
-
+function deleteRule() {
+    var styleSheet = document.styleSheets[0];
+    if (styleSheet.rules) {
+        styleSheet.cssRules = styleSheet.rules;
+    }
+    if (styleSheet.cssRules.length > 0) {
+        if (styleSheet.removeRule)
+            styleSheet.removeRule(0);
+        else if (styleSheet.deleteRule)
+            styleSheet.deletRule(0);
+    }
+}
 function addRule() {
     var styleSheet = document.styleSheets[0];
     /* if(styleSheet.addRule){
