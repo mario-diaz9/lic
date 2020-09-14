@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Filtrar entradas de teclado</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" />
+    <script src="js/filterInput.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Ingrese los datos según se piden</h1>
+        </header>
+        <section>
+            <article>
+                <form action="#" name="entradas" id="entradas" class="col-3-3">
+                    <fieldset class="register-group">
+                        <label>
+                            Nombre:
+                            <input type="text" name="comentarios" id="comentarios" placeholder="Nombre">
+                            <span id="txterror"></span>
+                        </label>
+                        <label>
+                            Correo electronico:
+                            <input type="text" name="edad" id="edad" placeholder="Edad" />
+                            <span id="msgerror"></span>
+                        </label>
+                        <label>
+                            comentarios:
+                            <textarea name="comentario" id="con" cols="30" rows="10" placeholder="Edad"></textarea>
+                            <span id="txterro"></span>
+                        </label>
+                    </fieldset>
+                    <input class="btn btn-default" type="submit" name="submit" value="Guardar" />
+                    <span id="txterror"></span>
+                </form>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>
