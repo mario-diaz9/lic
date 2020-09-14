@@ -17,13 +17,13 @@ function keyHit(evt) {
     var sig= document.getElementById("btnS");
     if (ant.addEventListener ) {
         ant.addEventListener("click", function () {
-            chgSlide(1);
+            chgSlide(-1);
             return false;
         }, false);
     }
     if (sig.addEventListener ) {
         sig.addEventListener("click", function () {
-            chgSlide(-1);
+            chgSlide(1);
             return false;
         }, false);
     }
