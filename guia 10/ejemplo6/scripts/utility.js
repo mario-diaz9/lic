@@ -17,4 +17,8 @@ $(document).ready(function () {
 			autoStart: false,
 			slideInterval: 5000
 	}); 
+	$('#accordion-5').easyAccordion({ 
+			autoStart: false,
+			slideInterval: 5000
+	}); 
 });
