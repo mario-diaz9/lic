@@ -9,7 +9,7 @@ import { ScrumService } from './scrum.service';
 <div class="media">
 <div class="media-left">
 <a href="#">
-<img src="https://1.bp.blogspot.com/-EhgIDIlkvc/VeQKGu13JOI/AAAAAAAAALk/stFLi1Yh81I/s320/Champions%2BLeague.png">
+<img src="https://i.pinimg.com/originals/cc/5c/57/cc5c57cc21653b7fbad9c6ce99cdb711.png">
 </a>
 </div>
 <div class="media-body">
